@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <title>E-Commerce Assignment</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header class="section-navbar">
+      <a href="#" class="logo">VENIA</a>
+      <div>
+        <ul id="navbar" class="navbar-elements">
+          <li><a class="active" href="/">Home</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">Man</a></li>
+          <li><a href="#">Electronic</a></li>
+          <li><a href="#">Jewellery</a></li>
+          <a href="#" id="close" class="close-btn"
+            ><i class="far fa-times"></i
+          ></a>
+        </ul>
+      </div>
+
+      <div class="navbar-elements icon-container">
+        <a class="cart-icon" href="#"
+          ><i class="fa-solid fa-bag-shopping"></i>
+          <span id="cart-items" class="cart-items-count-badge"> </span
+        ></a>
+      </div>
+      <div class="mobile cart-icon">
+        <div class="icon-container">
+          <a class="cart-icon" href="#"
+            ><i class="fa-solid fa-bag-shopping"> </i>
+            <span id="cart-items" class="cart-items-count-badge"> </span
+          ></a>
+        </div>
+
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
+    </header>
+
+    <!-- Banner section -->
+    <section class="banner-list-product-section">
+      <div class="banner-list-product-text">Shop Collections</div>
+      <div class="banner-list-product-image">
+        <img src="img/men-cloth-banner.jpg" height="250px" />
+      </div>
+    </section>
+
+    <!-- Main Product Section -->
+    <section class="main-section">
+    
+      <div class="main-filter-section">
+          <nav class="breadcrumb-items">
+            <a href="#">Clothing</a>
+            <span>/</span>
+            <a href="#">Women's</a>
+            <span>/</span>
+            <a href="#" class="text-mute">Outerwear</a>
+          </nav>
+      
+        <div class="main-text-filter">Filter</div>
+        <hr class="filter-hr-line" />
+        <div class="sub-text-filter">Categories</div>
+        <div class="main-category-list"></div>
+        <hr class="filter-hr-line" />
+      </div>
+      <div id="loader" class="loader"></div>
+      <div id="error-page" class="error-page">
+        An error occurred while fetching data. Please try again later.
+      </div>
+      <div class="content-container">
+        <div class="content-section-header">
+          <div class="content-section-heading-results">
+            <span id="total-results">0: Results</span>
+          </div>
+          <div class="content-section-search">
+            <input class="sort-dropdown" type="text" placeholder="Search any product" name="search"  oninput="searchProduct(this.value)">
+          </div>
+          <div class="content-section-heading-dropdown-select">
+            <select id="sort" class="sort-dropdown">
+              <option value="default">Sort by</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+        <div id="content" class="main-product-list-section"></div>
+        <div id="pagination" class="pagination"></div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section id="footer">
+      <div class="top-footer">
+        <div class="links">
+          <div class="single-link">
+            <ul>
+              <li>Account</li>
+              <li>Sign In</li>
+              <li>Register</li>
+              <li>Order Status</li>
+            </ul>
+          </div>
+          <div class="single-link">
+            <ul>
+              <li>About us</li>
+              <li>Our Story</li>
+              <li>Careers</li>
+            </ul>
+          </div>
+          <div class="single-link">
+            <ul>
+              <li>Help</li>
+              <li>Contact Us</li>
+              <li>Order Status</li>
+              <li>Returns</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="single-link follow-us">
+            <ul>
+              <li>Follow Us!</li>
+              <li>
+                Lorem ipsum dolor ipsum dolor ipsum dolor ipsum dolor ipsum
+                dolor ipsum dolor ipsum dolor ipsum dolor ipsum dolor
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-fotter">
+        <div class="bottom-footer-content">
+          <span>VENIA</span>
+          <p>&copy; Company Name, Address Ave, City Name, State ZIP</p>
+          <div class="terms-and-policy cursor-pointer">
+            <a>Terms of Use</a> <a>Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
